@@ -1,0 +1,991 @@
+ViewName,FileName,FieldName,DataType
+EAC_National_Qualification,BDM Accreditation Views.txt,EAC_National_Qualification_SK,VARCHAR(100)
+EAC_National_Qualification,BDM Accreditation Views.txt,D365CE_National_Qualification,VARCHAR(100)
+EAC_National_Qualification,BDM Accreditation Views.txt,ISO_Code,VARCHAR(100)
+EAC_National_Qualification,BDM Accreditation Views.txt,EAC_Qualification_Level_SK,VARCHAR(100)
+EAC_National_Qualification,BDM Accreditation Views.txt,Name,VARCHAR(100)
+EAC_National_Qualification,BDM Accreditation Views.txt,Qualification_Level,VARCHAR(100)
+EAC_National_Qualification,BDM Accreditation Views.txt,Country,VARCHAR(100)
+EAC_National_Qualification,BDM Accreditation Views.txt,Internal_Note,VARCHAR(4000)
+EAC_National_Qualification,BDM Accreditation Views.txt,External_Note,VARCHAR(4000)
+EAC_National_Qualification,BDM Accreditation Views.txt,Description,VARCHAR(100)
+EAC_National_Qualification,BDM Accreditation Views.txt,Order_Number,INT
+EAC_National_Qualification,BDM Accreditation Views.txt,CreatedOn_Year,INT
+EAC_National_Qualification,BDM Accreditation Views.txt,CreatedOn,DATETIME
+EAC_National_Qualification,BDM Accreditation Views.txt,ModifiedOn,DATETIME
+EAC_National_Qualification,BDM Accreditation Views.txt,National_Qualification_ID,VARCHAR(100)
+EAC_Programme,BDM Accreditation Views.txt,EAC_Programme_SK,VARCHAR(100)
+EAC_Programme,BDM Accreditation Views.txt,EAC_Institution_SK,VARCHAR(100)
+EAC_Programme,BDM Accreditation Views.txt,Programme,VARCHAR(400)
+EAC_Programme,BDM Accreditation Views.txt,Institution,VARCHAR(400)
+EAC_Programme,BDM Accreditation Views.txt,Notes,VARCHAR(4000)
+EAC_Programme,BDM Accreditation Views.txt,Internal_Note,VARCHAR(4000)
+EAC_Programme,BDM Accreditation Views.txt,CreatedOn_Year,INT
+EAC_Programme,BDM Accreditation Views.txt,CreatedOn,DATETIME
+EAC_Programme,BDM Accreditation Views.txt,ModifiedOn,DATETIME
+EAC_Available_Accreditation,BDM Accreditation Views.txt,EAC_Available_Accreditation_SK,VARCHAR(100)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,EAC_Institution_SK,VARCHAR(100)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,EAC_National_Qualification_SK,VARCHAR(100)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,EAC_Programme_SK,VARCHAR(100)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,EAC_Subject_Major_SK,VARCHAR(100)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,Exemption_Accreditation,VARCHAR(100)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,Assessment_Code,VARCHAR(100)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,Accredited_From,DATE
+EAC_Available_Accreditation,BDM Accreditation Views.txt,Accredited_To,DATE
+EAC_Available_Accreditation,BDM Accreditation Views.txt,Conditional_Exemptions_Allowed_YN,VARCHAR(100)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,Country,VARCHAR(100)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,External_Note,VARCHAR(4000)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,Internal_Note,VARCHAR(4000)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,Minimum_Entry_YN,VARCHAR(100)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,Search_Option,VARCHAR(100)
+EAC_Available_Accreditation,BDM Accreditation Views.txt,Accredited_From_Year,INT
+EAC_Available_Accreditation,BDM Accreditation Views.txt,CreatedOn,DATETIME
+EAC_Available_Accreditation,BDM Accreditation Views.txt,ModifiedOn,DATETIME
+EAC_Available_Accreditation,BDM Accreditation Views.txt,Status,VARCHAR(100)
+EAC_Qualification_Level,BDM Accreditation Views.txt,EAC_Qualification_Level_SK,VARCHAR(100)
+EAC_Qualification_Level,BDM Accreditation Views.txt,D365CE_Qualification_Level,VARCHAR(100)
+EAC_Qualification_Level,BDM Accreditation Views.txt,Name,VARCHAR(100)
+EAC_Qualification_Level,BDM Accreditation Views.txt,CreatedOn_Year,INT
+EAC_Qualification_Level,BDM Accreditation Views.txt,CreatedOn,DATETIME
+EAC_Qualification_Level,BDM Accreditation Views.txt,ModifiedOn,DATETIME
+EAC_Subject_Major,BDM Accreditation Views.txt,EAC_Subject_Major_SK,VARCHAR(100)
+EAC_Subject_Major,BDM Accreditation Views.txt,D365CE_Acca_SubjectMajorID,VARCHAR(100)
+EAC_Subject_Major,BDM Accreditation Views.txt,Name,VARCHAR(100)
+EAC_Subject_Major,BDM Accreditation Views.txt,Description,VARCHAR(4000)
+EAC_Subject_Major,BDM Accreditation Views.txt,Code,VARCHAR(100)
+EAC_Subject_Major,BDM Accreditation Views.txt,External_Note,VARCHAR(4000)
+EAC_Subject_Major,BDM Accreditation Views.txt,Internal_Note,VARCHAR(4000)
+EAC_Subject_Major,BDM Accreditation Views.txt,CreatedOn_Year,INT
+EAC_Subject_Major,BDM Accreditation Views.txt,CreatedOn,DATETIME
+EAC_Subject_Major,BDM Accreditation Views.txt,ModifiedOn,DATETIME
+APP_Application,BDM Application Views.txt,APP_Application_SK,VARCHAR(100)
+APP_Application,BDM Application Views.txt,Contact_Reference,VARCHAR(100)
+APP_Application,BDM Application Views.txt,Account_Number,VARCHAR(100)
+APP_Application,BDM Application Views.txt,Application_Reference,VARCHAR(100)
+APP_Application,BDM Application Views.txt,Application_Type,VARCHAR(100)
+APP_Application,BDM Application Views.txt,Status,VARCHAR(100)
+APP_Application,BDM Application Views.txt,Submitted_Date,DATE
+APP_Application,BDM Application Views.txt,Reason,VARCHAR(100)
+APP_Application,BDM Application Views.txt,Configuration_Name,VARCHAR(100)
+APP_Application,BDM Application Views.txt,CreatedOn_Year,INT
+APP_Application,BDM Application Views.txt,CreatedOn,DATETIME
+APP_Application,BDM Application Views.txt,ModifiedOn,DATETIME
+APP_Application,BDM Application Views.txt,B2B_Customer_SK,VARCHAR(100)
+APP_Application,BDM Application Views.txt,Rejected_Reason,VARCHAR(100)
+APP_Application,BDM Application Views.txt,Partner_Initiated_YN,VARCHAR(100)
+APP_Consent,BDM Application Views.txt,APP_Consent_SK,VARCHAR(100)
+APP_Consent,BDM Application Views.txt,D365CE_Customer,VARCHAR(100)
+APP_Consent,BDM Application Views.txt,Contact_Reference,VARCHAR(100)
+APP_Consent,BDM Application Views.txt,Account_Number,VARCHAR(100)
+APP_Consent,BDM Application Views.txt,Consent_Level,VARCHAR(100)
+APP_Consent,BDM Application Views.txt,Terms_And_Condition_Version,DECIMAL(32,2)
+APP_Consent,BDM Application Views.txt,Terms_And_Conditions,VARCHAR(100)
+APP_Consent,BDM Application Views.txt,Terms_And_Conditions_Accepted_Date,VARCHAR(100)
+APP_Consent,BDM Application Views.txt,CreatedOn_Year,INT
+APP_Consent,BDM Application Views.txt,CreatedOn,DATETIME
+APP_Consent,BDM Application Views.txt,ModifiedOn,DATETIME
+APP_Consent,BDM Application Views.txt,B2B_Customer_SK,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,APP_Accredited_Module_Application_SK,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,APP_Exemption_Accreditation_Application_SK,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,Assessment_Matrix,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,Assessment_Method,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,Exam_Duration,INT
+APP_Accredited_Module_Application,BDM Application Views.txt,Exam_Open_Or_Closed,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,Exam_Year,INT
+APP_Accredited_Module_Application,BDM Application Views.txt,Invigilation_YN,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,Module_Code,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,Module_Name,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,Mode_Of_Delivery,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,Monitoring_Date,DATE
+APP_Accredited_Module_Application,BDM Application Views.txt,Percentage_Of_Assessment_Method,INT
+APP_Accredited_Module_Application,BDM Application Views.txt,Pilot_Exam_YN,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,Status,VARCHAR(100)
+APP_Accredited_Module_Application,BDM Application Views.txt,CreatedOn_Year,INT
+APP_Accredited_Module_Application,BDM Application Views.txt,CreatedOn,DATETIME
+APP_Accredited_Module_Application,BDM Application Views.txt,ModifiedOn,DATETIME
+APP_Accredited_Programme_Application,BDM Application Views.txt,APP_Accredited_Programme_Application_SK,VARCHAR(100)
+APP_Accredited_Programme_Application,BDM Application Views.txt,APP_Exemption_Accreditation_Application_SK,VARCHAR(100)
+APP_Accredited_Programme_Application,BDM Application Views.txt,Programme_Title,VARCHAR(100)
+APP_Accredited_Programme_Application,BDM Application Views.txt,Email,VARCHAR(100)
+APP_Accredited_Programme_Application,BDM Application Views.txt,First_Name,VARCHAR(100)
+APP_Accredited_Programme_Application,BDM Application Views.txt,Last_Name,VARCHAR(100)
+APP_Accredited_Programme_Application,BDM Application Views.txt,Phone_Number,VARCHAR(100)
+APP_Accredited_Programme_Application,BDM Application Views.txt,CreatedOn_Year,INT
+APP_Accredited_Programme_Application,BDM Application Views.txt,CreatedOn,DATETIME
+APP_Accredited_Programme_Application,BDM Application Views.txt,ModifiedOn,DATETIME
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,APP_Exemption_Accreditation_Application_SK,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,APP_Application_SK,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Centres_Permitted_To_Run_Programme,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Modules_Submitted_For_Review_YN,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Created_By,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Industrial_Placement_Year_YN,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Institution_Programme_Pass_Mark,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Mode_Of_Study,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Use_Computer_Technology,VARCHAR(2000)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Work_On_Relevant_Response,VARCHAR(2000)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Navigate_Windows_And_Computer_Screens,VARCHAR(2000)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Present_Data_And_Information,VARCHAR(2000)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Program_Delivered_At_Multiple_Locations_YN,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Programme_Entry_Requirements,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Programme_Graduation_Date,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Qualification_Credit_Value,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Renewal_Application_YN,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Status,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Status_Reason,VARCHAR(100)
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,CreatedOn_Year,INT
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,CreatedOn,DATETIME
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,ModifiedOn,DATETIME
+APP_Exemption_Accreditation_Application,BDM Application Views.txt,Assessment_Matrix,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,D365CE_B2B_Customer,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,Account_Number,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,Account_Reference,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,Name,VARCHAR(1000)
+B2B_Customer,BDM B2B Customer Views.txt,Phone_Number,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,Website,VARCHAR(1000)
+B2B_Customer,BDM B2B Customer Views.txt,Main_Email_Address,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,Alternative_Name_1,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,Alternative_Name_2,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,B2B_Watchlist_Comments,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,Status,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,CreatedOn_Year,INT
+B2B_Customer,BDM B2B Customer Views.txt,CreatedOn,DATETIME
+B2B_Customer,BDM B2B Customer Views.txt,ModifiedOn,DATETIME
+B2B_Customer,BDM B2B Customer Views.txt,Customer_Balance_In_Transaction_Currency,DECIMAL(32,6)
+B2B_Customer,BDM B2B Customer Views.txt,Customer_Balance_In_Reporting_Currency,DECIMAL(32,6)
+B2B_Customer,BDM B2B Customer Views.txt,Customer_Overdue_Balance_In_Transaction_Currency,DECIMAL(32,6)
+B2B_Customer,BDM B2B Customer Views.txt,Customer_Overdue_Balance_In_Reporting_Currency,DECIMAL(32,6)
+B2B_Customer,BDM B2B Customer Views.txt,Finance_Email_Address,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,Invoice_Email_Address,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,B2B_Offering,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,D365CE_B2BOfferingId,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,B2B_Customer_SK,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,Legal_Entity,VARCHAR(100)
+B2B_Customer,BDM B2B Customer Views.txt,Global_Account_YN,VARCHAR(100)
+B2B_Connection,BDM B2B Customer Views.txt,B2B_Connection_SK,VARCHAR(100)
+B2B_Connection,BDM B2B Customer Views.txt,D365CE_B2B_Connection,VARCHAR(100)
+B2B_Connection,BDM B2B Customer Views.txt,Account_Number,VARCHAR(100)
+B2B_Connection,BDM B2B Customer Views.txt,Contact_Reference,VARCHAR(100)
+B2B_Connection,BDM B2B Customer Views.txt,Master_YN,VARCHAR(100)
+B2B_Connection,BDM B2B Customer Views.txt,Connection_Role,VARCHAR(100)
+B2B_Connection,BDM B2B Customer Views.txt,Connection_Start_Date,DATE
+B2B_Connection,BDM B2B Customer Views.txt,Connection_End_Date,DATE
+B2B_Connection,BDM B2B Customer Views.txt,Status,VARCHAR(100)
+B2B_Connection,BDM B2B Customer Views.txt,CreatedOn_Year,INT
+B2B_Connection,BDM B2B Customer Views.txt,CreatedOn,DATETIME
+B2B_Connection,BDM B2B Customer Views.txt,ModifiedOn,DATETIME
+B2B_Connection,BDM B2B Customer Views.txt,B2B_Customer_SK,VARCHAR(100)
+B2B_Role_History,BDM B2B Customer Views.txt,B2B_Role_History_SK,VARCHAR(100)
+B2B_Role_History,BDM B2B Customer Views.txt,Account_Number,VARCHAR(100)
+B2B_Role_History,BDM B2B Customer Views.txt,D365CE_Relationship_Role,VARCHAR(100)
+B2B_Role_History,BDM B2B Customer Views.txt,Relationship_Status,VARCHAR(100)
+B2B_Role_History,BDM B2B Customer Views.txt,Relationship_Type,VARCHAR(100)
+B2B_Role_History,BDM B2B Customer Views.txt,Relationship_Start_Date,DATE
+B2B_Role_History,BDM B2B Customer Views.txt,Relationship_End_Date,DATE
+B2B_Role_History,BDM B2B Customer Views.txt,Role_Status,VARCHAR(100)
+B2B_Role_History,BDM B2B Customer Views.txt,Role_Type,VARCHAR(100)
+B2B_Role_History,BDM B2B Customer Views.txt,Role_Type_Code,VARCHAR(100)
+B2B_Role_History,BDM B2B Customer Views.txt,Role_Start_Date,DATE
+B2B_Role_History,BDM B2B Customer Views.txt,Role_End_Date,DATE
+B2B_Role_History,BDM B2B Customer Views.txt,Application_Action,VARCHAR(100)
+B2B_Role_History,BDM B2B Customer Views.txt,Application_Action_Reason,VARCHAR(100)
+B2B_Role_History,BDM B2B Customer Views.txt,Relationship_Start_Date_Year,INT
+B2B_Role_History,BDM B2B Customer Views.txt,CreatedOn,DATETIME
+B2B_Role_History,BDM B2B Customer Views.txt,ModifiedOn,DATETIME
+B2B_Role_History,BDM B2B Customer Views.txt,B2B_Customer_SK,VARCHAR(100)
+B2B_Contact,BDM B2B Customer Views.txt,Contact_Reference,VARCHAR(100)
+B2B_Contact,BDM B2B Customer Views.txt,Title,VARCHAR(100)
+B2B_Contact,BDM B2B Customer Views.txt,First_Name,VARCHAR(100)
+B2B_Contact,BDM B2B Customer Views.txt,Last_Name,VARCHAR(100)
+B2B_Contact,BDM B2B Customer Views.txt,Full_Name,VARCHAR(100)
+B2B_Contact,BDM B2B Customer Views.txt,Job_Title,VARCHAR(100)
+B2B_Contact,BDM B2B Customer Views.txt,Email_Address_1,VARCHAR(100)
+B2B_Contact,BDM B2B Customer Views.txt,Telephone_Number,VARCHAR(100)
+B2B_Contact,BDM B2B Customer Views.txt,CreatedOn_Year,INT
+B2B_Contact,BDM B2B Customer Views.txt,CreatedOn,DATETIME
+B2B_Contact,BDM B2B Customer Views.txt,ModifiedOn,DATETIME
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,B2B_Assessment_Condition_SK,VARCHAR(100)
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,B2B_Approved_Employer_SK,VARCHAR(100)
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,B2B_Monitoring_SK,VARCHAR(100)
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,Condition,VARCHAR(100)
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,Name,VARCHAR(100)
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,Condition_Due_Date,DATE
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,Condition_Met_Date,DATE
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,CreatedOn_Year,INT
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,CreatedOn,DATETIME
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,ModifiedOn,DATETIME
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,B2B_Learning_Provider_SK,VARCHAR(100)
+B2B_Assessment_Condition,BDM B2B Customer Views.txt,B2B_ODCBE_SK,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,B2B_Approved_Employer_SK,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Stream_ID_AQD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Stream_ID_PCD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Stream_ID_PD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Stream_ID_TD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Stream_ID_SA,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Account_Number,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Scope_AQD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Scope_PCD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Scope_PD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Scope_TD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Scope_SA,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Sub_Scope_AQD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Sub_Scope_PCD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Sub_Scope_PD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Sub_Scope_TD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Sub_Scope_SA,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Valid_Until_AQD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Valid_Until_PCD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Valid_Until_PD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Valid_Until_TD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Valid_Until_SA,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approved_Streams,VARCHAR(1000)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Audit_Experience_Risk_YN,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,FPER_Exemption_YN,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Include_In_Directory_YN,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Other_Supervisory_Body,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Part_Dir_Involved_In_Training_Dev_And_Appraisal_YN,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Partner_Body,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,PO_Exemption_YN,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Recognised_Supervisory_Body,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Recommendations_AQD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Recommendations_PCD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Recommendations_PD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Recommendations_TD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Recommendations_SA,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Registry_ID_AQD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Registry_ID_PCD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Registry_ID_PD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Registry_ID_TD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Registry_ID_SA,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Renewal_Date_AQD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Renewal_Date_PCD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Renewal_Date_PD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Renewal_Date_TD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Subsidiaries_Included_In_Approval_AQD_YN,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Subsidiaries_Included_In_Approval_PCD_YN,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Subsidiaries_Included_In_Approval_PD_YN,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Subsidiaries_Included_In_Approval_TD_YN,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Training_Principal_IRBA_Registration_Number,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Account_Manager_AQD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Account_Manager_PCD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Account_Manager_PD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Account_Manager_TD,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Account_Manager_SA,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Monitoring_Due_Date_AQD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Monitoring_Due_Date_PCD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Monitoring_Due_Date_PD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Monitoring_Due_Date_TD,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Monitoring_Due_Date_SA,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Status,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Organisation_Sector,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Employees_In_Organisation,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Directors_Partners_In_Organisation,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Number_Of_Clients,INT
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Number_Of_Audit_Clients,INT
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Number_Of_ACCA_Trainees,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Number_Of_ACCA_Members,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,IRBA_Number,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Comments_AQD,VARCHAR(2000)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Comments_PCD,VARCHAR(2000)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Comments_PD,VARCHAR(2000)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Comments_TD,VARCHAR(2000)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Approval_Comments_SA,VARCHAR(2000)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Employers_ACCA_Grade,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,PCD_Directory_Preference_YN,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,CreatedOn_Year,INT
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,CreatedOn,DATETIME
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,ModifiedOn,DATETIME
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Renewal_Date_SA,DATE
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,B2B_Customer_SK,VARCHAR(100)
+B2B_Approved_Employer,BDM B2B Approved_Employer Views.txt,Subsidiaries_Included_In_Approval_SA_YN,VARCHAR(100)
+B2B_JES_Relationship_Role,BDM B2B Joint Schemes Views.txt,B2B_JES_Relationship_Role_SK,VARCHAR(100)
+B2B_JES_Relationship_Role,BDM B2B Joint Schemes Views.txt,B2B_JES_Agreement_SK,VARCHAR(100)
+B2B_JES_Relationship_Role,BDM B2B Joint Schemes Views.txt,Relationship_Role_Type,VARCHAR(100)
+B2B_JES_Relationship_Role,BDM B2B Joint Schemes Views.txt,Relationship_Type,VARCHAR(100)
+B2B_JES_Relationship_Role,BDM B2B Joint Schemes Views.txt,Created_On_Year,INT
+B2B_JES_Relationship_Role,BDM B2B Joint Schemes Views.txt,CreatedOn,DATETIME
+B2B_JES_Relationship_Role,BDM B2B Joint Schemes Views.txt,ModifiedOn,DATETIME
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,B2B_JES_Agreement_SK,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Account_Number,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Partner,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Country,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Can_Be_Removed_For_Unpaid_Fees_YN,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Closing_Date,DATE
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Code,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Commission_Fees_YN,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Business_Code,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Data_Sharing_Agreement_YN,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Exemption_Fees_Other_Details,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Exemption_Fees_Waived_YN,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Internal_Code,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Manually_Send_Pass_Rates_Report_YN,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Manually_Send_Prizewinners_Report_YN,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Manually_Send_Retention_Report_YN,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Manually_Send_Sittings_Report_YN,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Opening_Date,DATE
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Status,VARCHAR(100)
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,Created_On_Year,INT
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,CreatedOn,DATETIME
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,ModifiedOn,DATETIME
+B2B_JES_Agreement,BDM B2B Joint Schemes Views.txt,B2B_Customer_SK,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,B2B_Learning_Provider_SK,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,D365CE_Learning_Provider,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Account_Number,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Account_Manager,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Account_Name,VARCHAR(160)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Approval_End_Date_ALP,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Approval_End_Date_RLP,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Course_Start_Date_March_Session,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Course_Start_Date_June_Session,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Course_Start_Date_September_Session,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Course_Start_Date_December_Session,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Include_In_Directory_YN,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,In_Partnership_With_Another_Learning_Provider_YN,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Publicly_Funded_YN,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Country_Of_Learning_Provider_Partner,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Learning_Provider_Partnership_Start_Date,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Learning_Provider_Partnership_End_Date,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Learning_Provider_In_Partnership_With,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Mode_Of_Delivery,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Recommendations,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Teaches_Towards_March_Session_YN,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Teaches_Towards_June_Session_YN,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Teaches_Towards_September_Session_YN,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Teaches_Towards_December_Session_YN,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Teaching_Language,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Tuition_Offered_For_ACCA_YN,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Tuition_Offered_For_FIA_YN,VARCHAR(100)
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Start_Gold_Application_By,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Start_Teaching_By,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,CreatedOn_Year,INT
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,CreatedOn,DATETIME
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,ModifiedOn,DATETIME
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Tuition_Start_Date_ACCA,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Tuition_Start_Date_FIA,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Intended_Start_Date_ACCA,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Intended_Start_Date_FIA,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,Monitoring_Due_Date_ALP,DATE
+B2B_Learning_Provider,BDM B2B Learning Provider Views.txt,B2B_Customer_SK,VARCHAR(100)
+B2B_Variant,BDM B2B Learning Provider Views.txt,B2B_Variant_SK,VARCHAR(100)
+B2B_Variant,BDM B2B Learning Provider Views.txt,B2B_Exam_SK,VARCHAR(100)
+B2B_Variant,BDM B2B Learning Provider Views.txt,Variant_Name,VARCHAR(100)
+B2B_Variant,BDM B2B Learning Provider Views.txt,Variant_Code,VARCHAR(100)
+B2B_Variant,BDM B2B Learning Provider Views.txt,Display_Order,INT
+B2B_Variant,BDM B2B Learning Provider Views.txt,Parent_Variant_Code,VARCHAR(100)
+B2B_Variant,BDM B2B Learning Provider Views.txt,Parent_Variant_Name,VARCHAR(100)
+B2B_Variant,BDM B2B Learning Provider Views.txt,CreatedOn_Year,INT
+B2B_Variant,BDM B2B Learning Provider Views.txt,CreatedOn,DATETIME
+B2B_Variant,BDM B2B Learning Provider Views.txt,ModifiedOn,DATETIME
+B2B_Exam,BDM B2B Learning Provider Views.txt,B2B_Exam_SK,VARCHAR(100)
+B2B_Exam,BDM B2B Learning Provider Views.txt,Exam_Name,VARCHAR(100)
+B2B_Exam,BDM B2B Learning Provider Views.txt,Exam_Code,VARCHAR(100)
+B2B_Exam,BDM B2B Learning Provider Views.txt,Display_Order,INT
+B2B_Exam,BDM B2B Learning Provider Views.txt,Learning_Provider_Type_Taught_By,VARCHAR(100)
+B2B_Exam,BDM B2B Learning Provider Views.txt,Multiple_Variants_YN,VARCHAR(100)
+B2B_Exam,BDM B2B Learning Provider Views.txt,Pathway_Name,VARCHAR(100)
+B2B_Exam,BDM B2B Learning Provider Views.txt,Pathway_Code,VARCHAR(100)
+B2B_Exam,BDM B2B Learning Provider Views.txt,Qualification_Group,VARCHAR(100)
+B2B_Exam,BDM B2B Learning Provider Views.txt,Status,VARCHAR(100)
+B2B_Exam,BDM B2B Learning Provider Views.txt,CreatedOn_Year,INT
+B2B_Exam,BDM B2B Learning Provider Views.txt,CreatedOn,DATETIME
+B2B_Exam,BDM B2B Learning Provider Views.txt,ModifiedOn,DATETIME
+B2B_Exam_Taught,BDM B2B Learning Provider Views.txt,B2B_Exam_Taught_SK,VARCHAR(100)
+B2B_Exam_Taught,BDM B2B Learning Provider Views.txt,B2B_Learning_Provider_SK,VARCHAR(100)
+B2B_Exam_Taught,BDM B2B Learning Provider Views.txt,B2B_Exam_SK,VARCHAR(100)
+B2B_Exam_Taught,BDM B2B Learning Provider Views.txt,Name,VARCHAR(100)
+B2B_Exam_Taught,BDM B2B Learning Provider Views.txt,Study_Method,VARCHAR(100)
+B2B_Exam_Taught,BDM B2B Learning Provider Views.txt,Teaching_Language,VARCHAR(100)
+B2B_Exam_Taught,BDM B2B Learning Provider Views.txt,CreatedOn_Year,INT
+B2B_Exam_Taught,BDM B2B Learning Provider Views.txt,CreatedOn,DATETIME
+B2B_Exam_Taught,BDM B2B Learning Provider Views.txt,ModifiedOn,DATETIME
+B2B_Tutor,BDM B2B Learning Provider Views.txt,B2B_Tutor_SK,VARCHAR(100)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,APP_Application_SK,VARCHAR(100)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,Account_Number,VARCHAR(100)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,Contact_Reference,VARCHAR(100)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,Email_Address,VARCHAR(100)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,First_Name,VARCHAR(100)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,Job_Title,VARCHAR(100)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,Last_Name,VARCHAR(100)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,Telephone_Number,VARCHAR(100)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,Title,VARCHAR(100)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,Qualification,VARCHAR(100)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,Exam_Taught,VARCHAR(MAX)
+B2B_Tutor,BDM B2B Learning Provider Views.txt,CreatedOn_Year,INT
+B2B_Tutor,BDM B2B Learning Provider Views.txt,CreatedOn,DATETIME
+B2B_Tutor,BDM B2B Learning Provider Views.txt,ModifiedOn,DATETIME
+B2B_Tutor,BDM B2B Learning Provider Views.txt,B2B_Customer_SK,VARCHAR(100)
+B2B_Exam_Taught_Variant,BDM B2B Learning Provider Views.txt,B2B_Exam_Taught_Variant_SK,VARCHAR(100)
+B2B_Exam_Taught_Variant,BDM B2B Learning Provider Views.txt,B2B_Exam_Taught_SK,VARCHAR(100)
+B2B_Exam_Taught_Variant,BDM B2B Learning Provider Views.txt,B2B_Variant_SK,VARCHAR(100)
+B2B_Exam_Taught_Variant,BDM B2B Learning Provider Views.txt,CreatedOn_Year,INT
+B2B_Exam_Taught_Variant,BDM B2B Learning Provider Views.txt,CreatedOn,DATETIME
+B2B_Exam_Taught_Variant,BDM B2B Learning Provider Views.txt,ModifiedOn,DATETIME
+B2B_ODCBE,BDM B2B ODCBE Views.txt,B2B_ODCBE_SK,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,D365CE_ODCBE,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,Centre_Name,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,Number_Of_Workstations,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,Exam_Room_CCTV_YN,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,Directory_Contact_Email,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,Status,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,Account_Manager,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,Account_Number,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,Admin_Site_Different_To_CBE_Site_YN,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,License_Valid_Until,DATE
+B2B_ODCBE,BDM B2B ODCBE Views.txt,Monitoring_Date,DATE
+B2B_ODCBE,BDM B2B ODCBE Views.txt,ODCBE_Status_Expired_YN,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,Include_CBE_Centre_List_YN,VARCHAR(100)
+B2B_ODCBE,BDM B2B ODCBE Views.txt,CreatedOn_Year,INT
+B2B_ODCBE,BDM B2B ODCBE Views.txt,CreatedOn,DATETIME
+B2B_ODCBE,BDM B2B ODCBE Views.txt,ModifiedOn,DATETIME
+B2B_ODCBE,BDM B2B ODCBE Views.txt,B2B_Customer_SK,VARCHAR(100)
+CPD_Evidence,BDM B2C CPD Views.txt,CPD_Evidence_SK,VARCHAR(100)
+CPD_Evidence,BDM B2C CPD Views.txt,CPD_Year_SK,VARCHAR(100)
+CPD_Evidence,BDM B2C CPD Views.txt,Activity,VARCHAR(1000)
+CPD_Evidence,BDM B2C CPD Views.txt,Contact_Reference,VARCHAR(100)
+CPD_Evidence,BDM B2C CPD Views.txt,CPD_Evidence_End_Date,DATE
+CPD_Evidence,BDM B2C CPD Views.txt,Learning_Outcome,VARCHAR(3000)
+CPD_Evidence,BDM B2C CPD Views.txt,Provider,VARCHAR(1000)
+CPD_Evidence,BDM B2C CPD Views.txt,Relevance,VARCHAR(2000)
+CPD_Evidence,BDM B2C CPD Views.txt,CPD_Evidence_Start_Date,DATE
+CPD_Evidence,BDM B2C CPD Views.txt,Supporting_Evidence,VARCHAR(2000)
+CPD_Evidence,BDM B2C CPD Views.txt,Total_Units,DECIMAL(38,2)
+CPD_Evidence,BDM B2C CPD Views.txt,Total_Units_Claimed,DECIMAL(38,2)
+CPD_Evidence,BDM B2C CPD Views.txt,Verifiable_Units,DECIMAL(38,2)
+CPD_Evidence,BDM B2C CPD Views.txt,Year,INT
+CPD_Evidence,BDM B2C CPD Views.txt,CreatedOn,DATETIME
+CPD_Evidence,BDM B2C CPD Views.txt,ModifiedOn,DATETIME
+CPD_Declaration,BDM B2C CPD Views.txt,CPD_Declaration_SK,VARCHAR(100)
+CPD_Declaration,BDM B2C CPD Views.txt,D365CE_Acca_CPDDeclarationID,VARCHAR(100)
+CPD_Declaration,BDM B2C CPD Views.txt,CPD_Year_SK,VARCHAR(100)
+CPD_Declaration,BDM B2C CPD Views.txt,Completed_On,DATETIME
+CPD_Declaration,BDM B2C CPD Views.txt,Contact_Reference,VARCHAR(100)
+CPD_Declaration,BDM B2C CPD Views.txt,Created_By,VARCHAR(100)
+CPD_Declaration,BDM B2C CPD Views.txt,Met_YN,VARCHAR(100)
+CPD_Declaration,BDM B2C CPD Views.txt,Route,VARCHAR(100)
+CPD_Declaration,BDM B2C CPD Views.txt,Status,VARCHAR(100)
+CPD_Declaration,BDM B2C CPD Views.txt,Year,INT
+CPD_Declaration,BDM B2C CPD Views.txt,ModifiedOn,DATETIME
+CPD_Declaration,BDM B2C CPD Views.txt,CreatedOn,DATETIME
+CPD_Year,BDM B2C CPD Views.txt,CPD_Year_SK,VARCHAR(100)
+CPD_Year,BDM B2C CPD Views.txt,Contact_Reference,VARCHAR(100)
+CPD_Year,BDM B2C CPD Views.txt,Allowed_Declaration,INT
+CPD_Year,BDM B2C CPD Views.txt,Calculated_Total_Units,DECIMAL(38,2)
+CPD_Year,BDM B2C CPD Views.txt,Calculated_Total_Units_Brought_Forward,DECIMAL(38,2)
+CPD_Year,BDM B2C CPD Views.txt,Calculated_Verifiable_Units,DECIMAL(38,2)
+CPD_Year,BDM B2C CPD Views.txt,Calculated_Verifiable_Units_Including_Brought_Forward,DECIMAL(38,2)
+CPD_Year,BDM B2C CPD Views.txt,Evidence_Completed_YN,VARCHAR(100)
+CPD_Year,BDM B2C CPD Views.txt,IFAC_Body_YN,VARCHAR(100)
+CPD_Year,BDM B2C CPD Views.txt,Total_Unit_Adjustment,DECIMAL(38,2)
+CPD_Year,BDM B2C CPD Views.txt,Total_Unit_Adjustment_Date,DATE
+CPD_Year,BDM B2C CPD Views.txt,Total_Units_Claimed,DECIMAL(38,2)
+CPD_Year,BDM B2C CPD Views.txt,Total_Units_Claimed_Date,DATE
+CPD_Year,BDM B2C CPD Views.txt,Total_Verifiable_Units_Claimed,DECIMAL(38,2)
+CPD_Year,BDM B2C CPD Views.txt,Total_Verifiable_Units_Claimed_Date,DATE
+CPD_Year,BDM B2C CPD Views.txt,Units_To_Complete,DECIMAL(38,2)
+CPD_Year,BDM B2C CPD Views.txt,Verifiable_Units_To_Complete,DECIMAL(38,2)
+CPD_Year,BDM B2C CPD Views.txt,Year,INT
+CPD_Year,BDM B2C CPD Views.txt,CreatedOn,DATETIME
+CPD_Year,BDM B2C CPD Views.txt,ModifiedOn,DATETIME
+CPD_Adjustment,BDM B2C CPD Views.txt,CPD_Adjustment_SK,VARCHAR(100)
+CPD_Adjustment,BDM B2C CPD Views.txt,Contact_Reference,VARCHAR(100)
+CPD_Adjustment,BDM B2C CPD Views.txt,Discretionary_Waiver_YN,VARCHAR(100)
+CPD_Adjustment,BDM B2C CPD Views.txt,Duration,INT
+CPD_Adjustment,BDM B2C CPD Views.txt,Override_Unit,DECIMAL
+CPD_Adjustment,BDM B2C CPD Views.txt,Period_End_Date,DATETIME
+CPD_Adjustment,BDM B2C CPD Views.txt,Period_Start_Date,DATETIME
+CPD_Adjustment,BDM B2C CPD Views.txt,Reason,VARCHAR(100)
+CPD_Adjustment,BDM B2C CPD Views.txt,Status,VARCHAR(100)
+CPD_Adjustment,BDM B2C CPD Views.txt,Type,VARCHAR(100)
+CPD_Adjustment,BDM B2C CPD Views.txt,Unit_Adjustment,DECIMAL
+CPD_Adjustment,BDM B2C CPD Views.txt,Year,INT
+CPD_Adjustment,BDM B2C CPD Views.txt,CPD_Year_ID,VARCHAR(100)
+CPD_Adjustment,BDM B2C CPD Views.txt,CreatedOn,DATETIME
+CPD_Adjustment,BDM B2C CPD Views.txt,ModifiedOn,DATETIME
+CPD_Adjustment,BDM B2C CPD Views.txt,CPD_Year_SK,VARCHAR(100)
+CPD_Review,BDM B2C CPD Views.txt,CPD_Review_SK,VARCHAR(100)
+CPD_Review,BDM B2C CPD Views.txt,Contact_Reference,VARCHAR(100)
+CPD_Review,BDM B2C CPD Views.txt,D365CE_CPD_Review,VARCHAR(100)
+CPD_Review,BDM B2C CPD Views.txt,Outcome,VARCHAR(100)
+CPD_Review,BDM B2C CPD Views.txt,Status,VARCHAR(100)
+CPD_Review,BDM B2C CPD Views.txt,Monitoring_Period,VARCHAR(100)
+CPD_Review,BDM B2C CPD Views.txt,Completed_On,DATETIME
+CPD_Review,BDM B2C CPD Views.txt,CPD_Review_Open_YN,VARCHAR(100)
+CPD_Review,BDM B2C CPD Views.txt,CreatedOn_Year,INT
+CPD_Review,BDM B2C CPD Views.txt,ModifiedOn,DATETIME
+CPD_Review,BDM B2C CPD Views.txt,CreatedOn,DATETIME
+SVC_Activity,BDM B2C Customer Service Views.txt,SVC_Activity_SK,VARCHAR(100)
+SVC_Activity,BDM B2C Customer Service Views.txt,SVC_Case_SK,VARCHAR(100)
+SVC_Activity,BDM B2C Customer Service Views.txt,Activity_Type,VARCHAR(100)
+SVC_Activity,BDM B2C Customer Service Views.txt,Activity_Date,DATE
+SVC_Activity,BDM B2C Customer Service Views.txt,Due_Date,DATE
+SVC_Activity,BDM B2C Customer Service Views.txt,Priority,VARCHAR(100)
+SVC_Activity,BDM B2C Customer Service Views.txt,Status,VARCHAR(100)
+SVC_Activity,BDM B2C Customer Service Views.txt,Subject,VARCHAR(400)
+SVC_Activity,BDM B2C Customer Service Views.txt,CreatedOn_Year,INT
+SVC_Activity,BDM B2C Customer Service Views.txt,CreatedOn,DATETIME
+SVC_Activity,BDM B2C Customer Service Views.txt,ModifiedOn,DATETIME
+SVC_Activity,BDM B2C Customer Service Views.txt,Owner_Name,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,SVC_Case_SK,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,D365CE_Incident,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,APP_Application_SK,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,SVC_Service_Catalogue_SK,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Case_Number,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Contact_Reference,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Category_Name,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Category_Number,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Deactivate_On,DATETIME
+SVC_Case,BDM B2C Customer Service Views.txt,First_Response_On,DATETIME
+SVC_Case,BDM B2C Customer Service Views.txt,Origin,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Owner,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Raised_By,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Case_Title,VARCHAR(400)
+SVC_Case,BDM B2C Customer Service Views.txt,Case_Type,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Case_Status,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Customer_Name,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Owning_Business_Unit,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Manager,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,In_Progress_Reason,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Outcome_Reason,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Secondary_Category,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Created_By,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,Modified_By,VARCHAR(100)
+SVC_Case,BDM B2C Customer Service Views.txt,CreatedOn_Year,INT
+SVC_Case,BDM B2C Customer Service Views.txt,CreatedOn,DATETIME
+SVC_Case,BDM B2C Customer Service Views.txt,ModifiedOn,DATETIME
+SVC_Case,BDM B2C Customer Service Views.txt,Case_Status_Updated_Date,DATETIME
+SVC_Case,BDM B2C Customer Service Views.txt,Import_Sequence_Number,INT
+SVC_Case,BDM B2C Customer Service Views.txt,Time_Zone_Rule_Version_Number,INT
+SVC_Case,BDM B2C Customer Service Views.txt,UTC_Conversion_Time_Zone_Code,INT
+SVC_Case,BDM B2C Customer Service Views.txt,Version_Number,INT
+SVC_Case,BDM B2C Customer Service Views.txt,Case_Status_Reason,VARCHAR(100)
+SVC_Case_KPI,BDM B2C Customer Service Views.txt,SVC_Case_KPI_SK,VARCHAR(100)
+SVC_Case_KPI,BDM B2C Customer Service Views.txt,SVC_Case_SK,VARCHAR(100)
+SVC_Case_KPI,BDM B2C Customer Service Views.txt,Assigned,DATE
+SVC_Case_KPI,BDM B2C Customer Service Views.txt,Time_To_Assign,BIGINT
+SVC_Case_KPI,BDM B2C Customer Service Views.txt,Resolved,DATE
+SVC_Case_KPI,BDM B2C Customer Service Views.txt,Time_To_Resolve,BIGINT
+SVC_Case_KPI,BDM B2C Customer Service Views.txt,Closed,DATE
+SVC_Case_KPI,BDM B2C Customer Service Views.txt,Time_To_Close,BIGINT
+SVC_Case_KPI,BDM B2C Customer Service Views.txt,CreatedOn_Year,INT
+SVC_Case_KPI,BDM B2C Customer Service Views.txt,CreatedOn,DATETIME
+SVC_Case_KPI,BDM B2C Customer Service Views.txt,ModifiedOn,DATETIME
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,SVC_Case_Hold_Reason_SK,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,SVC_Case_SK,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,D365CE_CaseInProgressReasonsId,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Case_On_Hold_Reason_Name,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Import_Sequence_Number,INT
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Modified_On_Behalf_By,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Overridden_Created_On,DATE
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Owner_ID,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Owner_ID_Type,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Status,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Status_Reason,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Time_Zone_Rule_Version_Number,INT
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,UTC_Conversion_Time_Zone_Code,INT
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Version_Number,BIGINT
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Description,VARCHAR(2000)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,CreatedBy,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,ModifiedBy,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Owning_Business_Unit,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Created_On_Behalf_By,VARCHAR(100)
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,CreatedOn_Year,INT
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,CreatedOn,DATETIME
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,ModifiedOn,DATETIME
+SVC_Case_Hold_Reason,BDM B2C Customer Service Views.txt,Owner_Name,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Contact_Reference,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Global_Account_Number,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Title,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,First_Name,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Last_Name,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Full_Name,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Local_Language_First_Name,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Local_Language_Last_Name,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Email_Address,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Exam_Results_By_SMS_YN,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Important_Information_By_SMS_YN,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Legal_Flag,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Marketing_YN,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Offers_From_Third_Parties_YN,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Job_Title,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Start_Date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Date_Of_Birth,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Membership_Date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Fellow_Date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Lifetime_Member_Date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Affiliate_Date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Student_Earliest_Start_Date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Readmitted_Date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Fellow_Due_Date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Long_Term_Date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Graduation_Date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Designation,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Gender,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,ISO_Code,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Country,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Nationality,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Phone_Number,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,SQA_Eligible_date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Unique_Learner_Number,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,ACCA_Employer_Data_Sharing_Consent_YN,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Employment_Status,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Chinese_Customers_Data_Sharing_Consent_YN,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,JES_Data_Sharing_Consent_YN,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Employer,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Primary_Role_Type,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Primary_Role_Group,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Primary_Role_Relationship,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Primary_B2C_Role_History_SK,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Primary_Role_Start_Date,DATE
+B2C_Customer,BDM B2C Customer Views.txt,Primary_Role_Status,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Primary_Qual_Group,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Preferred_Contact_Method,VARCHAR(100)
+B2C_Customer,BDM B2C Customer Views.txt,Start_Date_Year,INT
+B2C_Customer,BDM B2C Customer Views.txt,CreatedOn,DATETIME
+B2C_Customer,BDM B2C Customer Views.txt,ModifiedOn,DATETIME
+B2C_Customer,BDM B2C Customer Views.txt,Customer_Balance_In_Transaction_Currency,DECIMAL(32,6)
+B2C_Customer,BDM B2C Customer Views.txt,Customer_Balance_In_Reporting_Currency,DECIMAL(32,6)
+B2C_Customer,BDM B2C Customer Views.txt,Customer_Overdue_Balance_In_Transaction_Currency,DECIMAL(32,6)
+B2C_Customer,BDM B2C Customer Views.txt,Customer_Overdue_Balance_In_Reporting_Currency,DECIMAL(32,6)
+B2C_Customer,BDM B2C Customer Views.txt,D365CE_ContactID,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,B2C_Practical_Experience_SK,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Contact_Reference,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Practical_Experience_Pathway,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Approved_Employer_Import_Flag,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Approved_Employer_Role_Flag_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Current_Roles_Hours_Per_Week,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Employer_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Employment_Status,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Essential_Objective_Approved_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Essential_Objective_Completed_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Essential_Objective_Exempt_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Essential_Objective_Started_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Exempt_Role_Status,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,First_Trainee_Login_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,First_Update_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,First_Update_Date_Year,INT
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Last_Trainee_Login_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Last_Update_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Number_Of_Months_Remaining,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_1_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_1_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_1_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_2_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_2_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_2_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_3_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_3_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_3_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_4_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_4_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_4_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_5_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_5_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_5_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_6_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_6_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_6_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_7_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_7_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_7_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_8_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_8_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_8_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_9_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_9_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_9_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_10_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_10_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_10_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_11_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_11_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_11_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_12_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_12_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_12_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_13_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_13_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_13_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_14_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_14_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_14_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_15_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_15_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_15_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_16_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_16_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_16_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_17_Element_Count,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_17_State,VARCHAR(100)
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_17_State_Date,DATE
+B2C_Practical_Experience,BDM B2C Customer Views.txt,Objective_18_Element_Count,VARCHAR(100)
+COM_Country,BDM Common Views.txt,ISO_Code,VARCHAR(100)
+COM_Country,BDM Common Views.txt,Name,VARCHAR(100)
+COM_Country,BDM Common Views.txt,ISO_Short_Code,VARCHAR(100)
+COM_Country,BDM Common Views.txt,Price_Group,VARCHAR(100)
+COM_Country,BDM Common Views.txt,Exam_Location_Price_Group,VARCHAR(100)
+COM_Country,BDM Common Views.txt,CreatedOn,DATETIME
+COM_Country,BDM Common Views.txt,ModifiedOn,DATETIME
+COM_Country,BDM Common Views.txt,D365CE_Acca_Country,VARCHAR(100)
+COM_Country,BDM Common Views.txt,Status,VARCHAR(100)
+COM_Address,BDM Common Views.txt,COM_Address_SK,VARCHAR(100)
+COM_Address,BDM Common Views.txt,ISO_Code,VARCHAR(100)
+COM_Address,BDM Common Views.txt,Contact_Reference,VARCHAR(100)
+COM_Address,BDM Common Views.txt,Account_Number,VARCHAR(100)
+COM_Address,BDM Common Views.txt,Address_Number,INT
+COM_Address,BDM Common Views.txt,Address_Line_1,VARCHAR(1000)
+COM_Address,BDM Common Views.txt,Address_Line_2,VARCHAR(1000)
+COM_Address,BDM Common Views.txt,Address_Line_3,VARCHAR(1000)
+COM_Address,BDM Common Views.txt,City,VARCHAR(100)
+COM_Address,BDM Common Views.txt,County,VARCHAR(100)
+COM_Address,BDM Common Views.txt,State_Province,VARCHAR(100)
+COM_Address,BDM Common Views.txt,ZIP_Postal_Code,VARCHAR(100)
+COM_Address,BDM Common Views.txt,ISO_Short_Code,VARCHAR(100)
+COM_Address,BDM Common Views.txt,Country,VARCHAR(100)
+COM_Address,BDM Common Views.txt,Type,VARCHAR(100)
+COM_Address,BDM Common Views.txt,Validated_Date,DATE
+COM_Address,BDM Common Views.txt,CreatedOn,DATETIME
+COM_Address,BDM Common Views.txt,ModifiedOn,DATETIME
+COM_Address,BDM Common Views.txt,B2B_Customer_SK,VARCHAR(100)
+EXM_Adjustment_Rule,BDM Exams Views.txt,EXM_Adjustment_Rule_SK,VARCHAR(100)
+EXM_Adjustment_Rule,BDM Exams Views.txt,Description,VARCHAR(1000)
+EXM_Adjustment_Rule,BDM Exams Views.txt,Desk_Range_Start,INT
+EXM_Adjustment_Rule,BDM Exams Views.txt,Desk_Range_End,INT
+EXM_Adjustment_Rule,BDM Exams Views.txt,MCQ_Answer,VARCHAR(100)
+EXM_Adjustment_Rule,BDM Exams Views.txt,Adjustment_Value,DECIMAL(10,0)
+EXM_Adjustment_Rule,BDM Exams Views.txt,Created_By,VARCHAR(100)
+EXM_Adjustment_Rule,BDM Exams Views.txt,Modified_By,VARCHAR(100)
+EXM_Adjustment_Rule,BDM Exams Views.txt,CreatedOn_Year,INT
+EXM_Adjustment_Rule,BDM Exams Views.txt,CreatedOn,DATETIME
+EXM_Adjustment_Rule,BDM Exams Views.txt,ModifiedOn,DATETIME
+EXM_Adjustment_Rule,BDM Exams Views.txt,Session_Period_Date,DATE
+EXM_Adjustment_Rule,BDM Exams Views.txt,EXM_Session_Period_SK,VARCHAR(100)
+EXM_Adjustment_Rule,BDM Exams Views.txt,Session_Key,VARCHAR(100)
+EXM_Adjustment_Rule,BDM Exams Views.txt,ExamsDB_Question_ID,VARCHAR(100)
+EXM_Adjustment_Rule,BDM Exams Views.txt,EXM_Centre_SK,VARCHAR(100)
+EXM_Adjustment_Rule,BDM Exams Views.txt,EXM_Session_Venue_SK,VARCHAR(100)
+EXM_Adjustments,BDM Exams Views.txt,EXM_Adjustments_SK,VARCHAR(100)
+EXM_Adjustments,BDM Exams Views.txt,EXM_Adjustment_Rule_SK,VARCHAR(100)
+EXM_Adjustments,BDM Exams Views.txt,EXM_Sitting_SK,VARCHAR(100)
+EXM_Adjustments,BDM Exams Views.txt,CreatedOn_Year,INT
+EXM_Adjustments,BDM Exams Views.txt,CreatedOn,DATETIME
+EXM_Adjustments,BDM Exams Views.txt,ModifiedOn,DATETIME
+EXM_Booking,BDM Exams Views.txt,EXM_Booking_SK,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,EXM_Subject_SK,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,EXM_Sitting_SK,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Contact_Reference,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Session_Key,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Chosen_Session_Centre_Code,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Booking_Date,DATETIME
+EXM_Booking,BDM Exams Views.txt,Delivery_Format,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Sitting_Date,DATETIME
+EXM_Booking,BDM Exams Views.txt,Syllabus_Code,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Variant_Code,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Online_YN,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Entry_Period,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Entry_Route,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,RI_Price_Band,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Subject_Code,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Withdrawn_YN,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Valid_YN,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,CreatedOn_Year,INT
+EXM_Booking,BDM Exams Views.txt,CreatedOn,DATETIME
+EXM_Booking,BDM Exams Views.txt,ModifiedOn,DATETIME
+EXM_Booking,BDM Exams Views.txt,EXM_Booking_Result_SK,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Withdrawn_Date,DATE
+EXM_Booking,BDM Exams Views.txt,Created_By,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Allocated_Centre_Code,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Priority_YN,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Late_Entry_YN,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Transfer_YN,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Notified_YN,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Price_Paid,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Exam_Duration,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Desk_Number,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Price_Listed,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Entry_Period_Override,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,Allocated_Venue_Code,INT
+EXM_Booking,BDM Exams Views.txt,Language_Code,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,EXM_Session_Centre_Chosen_SK,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,EXM_Session_Centre_Allocated_SK,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,EXM_Session_Venue_Allocated_SK,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,EXM_Pathway_SK,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,EXM_Pathway_Subject_SK,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,EXM_Subject_Variant_SK,VARCHAR(100)
+EXM_Booking,BDM Exams Views.txt,EXM_Session_Subject_Variant_SK,VARCHAR(100)
+EXM_Centre,BDM Exams Views.txt,EXM_Centre_SK,VARCHAR(100)
+EXM_Centre,BDM Exams Views.txt,EXM_Location_SK,VARCHAR(100)
+EXM_Centre,BDM Exams Views.txt,Centre_Code,VARCHAR(100)
+EXM_Centre,BDM Exams Views.txt,ISO_Code,VARCHAR(100)
+EXM_Centre,BDM Exams Views.txt,Centre_Name,VARCHAR(100)
+EXM_Centre,BDM Exams Views.txt,Centre_Time_Zone,VARCHAR(100)
+EXM_Centre,BDM Exams Views.txt,Centre_Type,VARCHAR(100)
+EXM_Centre,BDM Exams Views.txt,CreatedOn_Year,INT
+EXM_Centre,BDM Exams Views.txt,CreatedOn,DATETIME
+EXM_Centre,BDM Exams Views.txt,ModifiedOn,DATETIME
+EXM_Centre,BDM Exams Views.txt,Deleted_YN,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,FIN_Customer_Invoice_SK,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Invoice_Number,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Journal_Number,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Voucher,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Currency_Code,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Customer_Account,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Invoice_Date,DATE
+FIN_Customer_Invoice,BDM Finance Views.txt,Invoice_Account,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Invoice_Amount,DECIMAL(38,6)
+FIN_Customer_Invoice,BDM Finance Views.txt,Payment_Reference,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Sales_Order,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Settle_Amount,DECIMAL(38,6)
+FIN_Customer_Invoice,BDM Finance Views.txt,Transaction_Date,DATE
+FIN_Customer_Invoice,BDM Finance Views.txt,Transaction_Type,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,GL_Date,DATE
+FIN_Customer_Invoice,BDM Finance Views.txt,Transaction_Date_Year,INT
+FIN_Customer_Invoice,BDM Finance Views.txt,CreatedOn,DATETIME
+FIN_Customer_Invoice,BDM Finance Views.txt,ModifiedOn,DATETIME
+FIN_Customer_Invoice,BDM Finance Views.txt,Legal_Entity,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Invoice_Amount_In_Transaction_Currency,DECIMAL(38,6)
+FIN_Customer_Invoice,BDM Finance Views.txt,Invoice_Amount_In_Reporting_Currency_Absolute,DECIMAL(38,6)
+FIN_Customer_Invoice,BDM Finance Views.txt,Due_Date,DATE
+FIN_Customer_Invoice,BDM Finance Views.txt,Dunning_Letter_Code,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Outstanding_Amount_In_Reporting_Currency,DECIMAL(38,6)
+FIN_Customer_Invoice,BDM Finance Views.txt,Collections_Status,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Promise_To_Pay_Date,DATE
+FIN_Customer_Invoice,BDM Finance Views.txt,Promise_To_Pay_Amount,DECIMAL(38,6)
+FIN_Customer_Invoice,BDM Finance Views.txt,Collections_Status_Reason,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Collections_Status_Reason_Comment,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Invoice_Exchange_Rate,DECIMAL(38,16)
+FIN_Customer_Invoice,BDM Finance Views.txt,Payment_Overdue_Days,INT
+FIN_Customer_Invoice,BDM Finance Views.txt,Partially_Paid_YN,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Invoice_Amount_In_Reporting_Currency,DECIMAL(38,6)
+FIN_Customer_Invoice,BDM Finance Views.txt,Paid_Date,DATETIME
+FIN_Customer_Invoice,BDM Finance Views.txt,FIN_Voucher_SK,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,Outstanding_Amount_In_Transaction_Currency,DECIMAL(38,6)
+FIN_Customer_Invoice,BDM Finance Views.txt,Paymreference,VARCHAR(100)
+FIN_Customer_Invoice,BDM Finance Views.txt,FIN_Sales_Order_SK,VARCHAR(100)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,FIN_Customer_Invoice_Line_SK,VARCHAR(100)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,FIN_Customer_Invoice_SK,VARCHAR(100)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,FIN_Product_SK,VARCHAR(100)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Invoice_Number,VARCHAR(100)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Invoice_Date,DATE
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Invoice_Line_Description,VARCHAR(1000)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Line_Number,DECIMAL(38,16)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Line_Sequence_Number,INT
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Amount,DECIMAL(38,6)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Discount,DECIMAL(38,6)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Discount_Percent,DECIMAL(38,6)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Item_Number,VARCHAR(100)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Quantity,DECIMAL(38,6)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Unit_Price,DECIMAL(38,6)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Sales_Category,VARCHAR(100)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,CreatedOn_Year,INT
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,CreatedOn,DATETIME
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,ModifiedOn,DATETIME
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Price_Adjustment,DECIMAL(38,6)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Rate_Card_Discount,DECIMAL(38,6)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Currency_Code,VARCHAR(100)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Gift_Aid_YN,VARCHAR(100)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Previous_Gift_Aid_YN,VARCHAR(100)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Original_Sales_Order,VARCHAR(3000)
+FIN_Customer_Invoice_Line,BDM Finance Views.txt,Original_Invoice_Number,VARCHAR(1000)
+FIN_Customer,BDM Finance Views.txt,FIN_Customer_SK,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,FIN_Sales_Tax_Group_SK,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Contact_Reference,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Account_Number,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Customer_Name,VARCHAR(300)
+FIN_Customer,BDM Finance Views.txt,Discount_Price_Group,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Legal_Entity,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Method_Of_Payment,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Sales_Currency_Code,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,CreatedOn_Year,INT
+FIN_Customer,BDM Finance Views.txt,CreatedOn,DATETIME
+FIN_Customer,BDM Finance Views.txt,ModifiedOn,DATETIME
+FIN_Customer,BDM Finance Views.txt,Terms_Of_Payment,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Credit_Limit,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Account_Status,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Account_Status_Reason,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Credit_Limit_Last_Review_Date,DATE
+FIN_Customer,BDM Finance Views.txt,Credit_Limit_Next_Review_Date,DATE
+FIN_Customer,BDM Finance Views.txt,Credit_Limit_Date,DATE
+FIN_Customer,BDM Finance Views.txt,Customer_Type,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,With_Collection_Agency_Flag_YN,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Invoice_Account_Number,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,Tax_Status,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,VAT_Number,VARCHAR(100)
+FIN_Customer,BDM Finance Views.txt,B2B_Customer_SK,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Acca_ID,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Name,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Account_Number,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Account_Reference,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Email_Address,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Exam_Session_Key,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Exam,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Exam_Name,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Exam_Subject_Variant,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Centre_Code,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Centre_Name,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Category1,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Category2,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Result_Code,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Mark,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Language,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Created_Date,DATETIME
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Status,VARCHAR(100)
+Integration_Learning_Provider_Result,BDM Integration Views.txt,Qualification,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,B2B_Lead_SK,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,D365CE_Campaign,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Source,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Account_Name,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Account_Number,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Preferred_Contact_Method,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Description,VARCHAR(4000)
+B2B_Lead,BDM Sales and Marketing Views.txt,Bulk_Email_Consent_YN,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Email_Consent_YN,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Telephone_Consent_YN,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Email,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,First_Name,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Industry_Sector,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Job_Title,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Last_Name,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Market,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Mobile_Number,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Business_Phone,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Product_Of_Interest,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Salutation,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,State_Province,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Street_1,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Street_2,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Street_3,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,City,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Country,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Postal_Code,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Topic,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,Confirm_Interest_YN,VARCHAR(100)
+B2B_Lead,BDM Sales and Marketing Views.txt,CreatedOn_Year,INT
+B2B_Lead,BDM Sales and Marketing Views.txt,CreatedOn,DATETIME
+B2B_Lead,BDM Sales and Marketing Views.txt,ModifiedOn,DATETIME
+B2B_Lead,BDM Sales and Marketing Views.txt,B2B_Customer_SK,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,B2C_Lead_SK,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Contact_Reference,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,D365CE_Relationshiprole,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Start_Date,DATE
+B2C_Lead,BDM Sales and Marketing Views.txt,Status,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,End_Date,DATE
+B2C_Lead,BDM Sales and Marketing Views.txt,Lead_Type,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Other_Source,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Country_Of_Residence_Code,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Preprospect_Qual_Of_Interest,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Prospect_Qual_Of_Interest,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Preprospect_Interest_Source,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Prospect_Interest_Source,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Primary_Role_Code,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,CreatedOn_Year,INT
+B2C_Lead,BDM Sales and Marketing Views.txt,CreatedOn,DATETIME
+B2C_Lead,BDM Sales and Marketing Views.txt,ModifiedOn,DATETIME
+B2C_Lead,BDM Sales and Marketing Views.txt,Referral_Source,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Prospect_Start_Date,DATE
+B2C_Lead,BDM Sales and Marketing Views.txt,Preprospect_Start_Date,DATE
+B2C_Lead,BDM Sales and Marketing Views.txt,First_Name,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Last_Name,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Email_Address,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Telephone_Number,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Country,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,ZIP_Postal_Code,VARCHAR(100)
+B2C_Lead,BDM Sales and Marketing Views.txt,Email_Consent_YN,VARCHAR(100)
