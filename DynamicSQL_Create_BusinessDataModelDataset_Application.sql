@@ -1,0 +1,602 @@
+USE BusinessDataModelDataset;
+GO 
+/*
+These variables will be passed as parameters from the script activity.
+Ensure that these declarations remain in the script activity. Otherwise the string length will be limited to 4000 characters.
+Also ensure that the string variables declared below are of type varchar.
+Otherwise, if using nvarchar, the dynamic sql length will be limited to 4000 characters due to an implicit conversion (varchar to nvarchar) made during the string concatination.
+*/
+ 
+DECLARE @CuratedContainerName varchar(255) = 'curated'
+------------------------------------------------------------------------------------------------------
+--Copy and paste from below into the script activity. Uncomment variable declaration section.
+/*
+DECLARE @CuratedContainerName varchar(255) = @CuratedContainerName_Input
+*/
+
+--Do not convert this to nvarchar as nvarchar limits string length to 4000 characters whereas maximum length for varchar type is 8000.
+DECLARE @DynamicSQL varchar(8000)
+
+--APP_Application
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Application] AS
+SELECT
+APP_Application_SK,
+Contact_Reference,
+Account_Number,
+Application_Reference,
+Application_Type,
+Status,
+Submitted_Date,
+Reason,
+Configuration_Name,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn,
+B2B_Customer_SK,
+Rejected_Reason,
+Partner_Initiated_YN
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Application/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Application_SK VARCHAR(100),
+Contact_Reference VARCHAR(100),
+Account_Number VARCHAR(100),
+Application_Reference VARCHAR(100),
+Application_Type VARCHAR(200),
+Status VARCHAR(4000),
+Submitted_Date DATE,
+Reason VARCHAR(4000),
+Configuration_Name VARCHAR(200),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+B2B_Customer_SK VARCHAR(100),
+Rejected_Reason VARCHAR(100),
+Partner_Initiated_YN VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_Consent
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Consent] AS
+SELECT
+APP_Consent_SK,
+D365CE_Customer,
+Contact_Reference,
+Account_Number,
+Consent_Level,
+Terms_And_Condition_Version,
+Terms_And_Conditions,
+Terms_And_Conditions_Accepted_Date,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn,
+B2B_Customer_SK
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Consent/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Consent_SK VARCHAR(100),
+D365CE_Customer VARCHAR(160),
+Contact_Reference VARCHAR(100),
+Account_Number VARCHAR(100),
+Consent_Level VARCHAR(100),
+Terms_And_Condition_Version DECIMAL(32,2),
+Terms_And_Conditions VARCHAR(100),
+Terms_And_Conditions_Accepted_Date VARCHAR(100),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+B2B_Customer_SK VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_Accredited_Module_Application
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Accredited_Module_Application] AS
+SELECT
+APP_Accredited_Module_Application_SK,
+APP_Exemption_Accreditation_Application_SK,
+Assessment_Matrix,
+Assessment_Method,
+Exam_Duration,
+Exam_Open_Or_Closed,
+Exam_Year,
+Invigilation_YN,
+Module_Code,
+Module_Name,
+Mode_Of_Delivery,
+Monitoring_Date,
+Percentage_Of_Assessment_Method,
+Pilot_Exam_YN,
+Status,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Accredited_Module_Application/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Accredited_Module_Application_SK VARCHAR(100),
+APP_Exemption_Accreditation_Application_SK VARCHAR(100),
+Assessment_Matrix VARCHAR(MAX),
+Assessment_Method VARCHAR(4000),
+Exam_Duration INT,
+Exam_Open_Or_Closed VARCHAR(100),
+Exam_Year INT,
+Invigilation_YN VARCHAR(100),
+Module_Code VARCHAR(100),
+Module_Name VARCHAR(2000),
+Mode_Of_Delivery VARCHAR(4000),
+Monitoring_Date DATE,
+Percentage_Of_Assessment_Method INT,
+Pilot_Exam_YN VARCHAR(100),
+Status VARCHAR(4000),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_Accredited_Programme_Application
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Accredited_Programme_Application] AS
+SELECT
+APP_Accredited_Programme_Application_SK,
+APP_Exemption_Accreditation_Application_SK,
+Programme_Title,
+Email,
+First_Name,
+Last_Name,
+Phone_Number,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Accredited_Programme_Application/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Accredited_Programme_Application_SK VARCHAR(100),
+APP_Exemption_Accreditation_Application_SK VARCHAR(100),
+Programme_Title VARCHAR(850),
+Email VARCHAR(100),
+First_Name VARCHAR(100),
+Last_Name VARCHAR(100),
+Phone_Number VARCHAR(100),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_Exemption_Accreditation_Application
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Exemption_Accreditation_Application] AS
+SELECT
+APP_Exemption_Accreditation_Application_SK,
+APP_Application_SK,
+Centres_Permitted_To_Run_Programme,
+Modules_Submitted_For_Review_YN,
+Created_By,
+Industrial_Placement_Year_YN,
+Institution_Programme_Pass_Mark,
+Mode_Of_Study,
+Use_Computer_Technology,
+Work_On_Relevant_Response,
+Navigate_Windows_And_Computer_Screens,
+Present_Data_And_Information,
+Program_Delivered_At_Multiple_Locations_YN,
+Programme_Entry_Requirements,
+Programme_Graduation_Date,
+Qualification_Credit_Value,
+Renewal_Application_YN,
+Status,
+Status_Reason,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn
+Assessment_Matrix
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Exemption_Accreditation_Application/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Exemption_Accreditation_Application_SK VARCHAR(100),
+APP_Application_SK VARCHAR(100),
+Centres_Permitted_To_Run_Programme VARCHAR(2000),
+Modules_Submitted_For_Review_YN VARCHAR(100),
+Created_By VARCHAR(100),
+Industrial_Placement_Year_YN VARCHAR(100),
+Institution_Programme_Pass_Mark VARCHAR(100),
+Mode_Of_Study VARCHAR(4000),
+Use_Computer_Technology VARCHAR(8000),
+Work_On_Relevant_Response VARCHAR(2000),
+Navigate_Windows_And_Computer_Screens VARCHAR(8000),
+Present_Data_And_Information VARCHAR(6000),
+Program_Delivered_At_Multiple_Locations_YN VARCHAR(100),
+Programme_Entry_Requirements VARCHAR(2000),
+Programme_Graduation_Date DATE,
+Qualification_Credit_Value VARCHAR(300),
+Renewal_Application_YN VARCHAR(100),
+Status VARCHAR(4000),
+Status_Reason VARCHAR(4000),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+Assessment_Matrix VARCHAR(MAX)
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_Approved_Employer_Application
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Approved_Employer_Application] AS
+SELECT
+APP_Approved_Employer_Application_SK,
+APP_Application_SK,
+Application_Created_By,
+Application_Closed_Date,
+Status,
+Status_Reason,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn,
+B2B_Approved_Employer_SK
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Approved_Employer_Application/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Approved_Employer_Application_SK VARCHAR(100),
+APP_Application_SK VARCHAR(100),
+Application_Created_By VARCHAR(100),
+Application_Closed_Date DATE,
+Status VARCHAR(4000),
+Status_Reason VARCHAR(4000),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+B2B_Approved_Employer_SK VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_Learning_Partner_Application
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Learning_Partner_Application] AS
+SELECT
+APP_Learning_Partner_Application_SK,
+D365CE_Learning_Partner_Application_Details,
+APP_Application_SK,
+Holding_Company_Or_Group,
+Premises,
+Application_Created_By,
+Status,
+Status_Reason,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn,
+B2B_Learning_Provider_SK
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Learning_Partner_Application/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Learning_Partner_Application_SK VARCHAR(100),
+D365CE_Learning_Partner_Application_Details VARCHAR(100),
+APP_Application_SK VARCHAR(100),
+Holding_Company_Or_Group VARCHAR(1000),
+Premises VARCHAR(MAX),
+Application_Created_By VARCHAR(100),
+Status VARCHAR(4000),
+Status_Reason VARCHAR(4000),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+B2B_Learning_Provider_SK VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_ODCBE_Application
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_ODCBE_Application] AS
+SELECT
+APP_ODCBE_Application_SK,
+B2B_ODCBE_SK,
+APP_Application_SK,
+D365CE_ODCBE_Application,
+Nature_Of_Business,
+Separate_Admin_Room_YN,
+Admin_Room_Accessible_YN,
+Admin_Site_Distance,
+Invigilator_Desk_YN,
+Invigilator_PC_YN,
+Invigilator_Vision_YN,
+Layout_Distance_Between_Rooms,
+Number_Of_CBE_Rooms,
+Personal_Belongings_Other,
+Personal_Belongings_Storage,
+Previous_Experience,
+Toilet_Facilities_YN,
+Status_Reason,
+Status,
+Created_By,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_ODCBE_Application/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_ODCBE_Application_SK VARCHAR(100),
+B2B_ODCBE_SK VARCHAR(100),
+APP_Application_SK VARCHAR(100),
+D365CE_ODCBE_Application VARCHAR(100),
+Nature_Of_Business VARCHAR(4000),
+Separate_Admin_Room_YN VARCHAR(100),
+Admin_Room_Accessible_YN VARCHAR(100),
+Admin_Site_Distance VARCHAR(4000),
+Invigilator_Desk_YN VARCHAR(100),
+Invigilator_PC_YN VARCHAR(100),
+Invigilator_Vision_YN VARCHAR(100),
+Layout_Distance_Between_Rooms VARCHAR(MAX),
+Number_Of_CBE_Rooms VARCHAR(100),
+Personal_Belongings_Other VARCHAR(2000),
+Personal_Belongings_Storage VARCHAR(4000),
+Previous_Experience VARCHAR(MAX),
+Toilet_Facilities_YN VARCHAR(100),
+Status_Reason VARCHAR(4000),
+Status VARCHAR(4000),
+Created_By VARCHAR(100),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_Affiliate_To_Member
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Affiliate_To_Member] AS
+SELECT
+APP_Affiliate_To_Member_SK,
+APP_Application_SK,
+Completed_Recorded_Practical_Experience_YN,
+Documents_Required_YN,
+Express_Permission_For_Application_YN,
+Previous_Convictions_Or_Cautions_YN,
+Works_For_An_Approved_Employer_YN,
+Works_In_Public_Practice_YN,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Affiliate_To_Member/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Affiliate_To_Member_SK VARCHAR(850),
+APP_Application_SK VARCHAR(100),
+Completed_Recorded_Practical_Experience_YN VARCHAR(100),
+Documents_Required_YN VARCHAR(100),
+Express_Permission_For_Application_YN VARCHAR(100),
+Previous_Convictions_Or_Cautions_YN VARCHAR(100),
+Works_For_An_Approved_Employer_YN VARCHAR(100),
+Works_In_Public_Practice_YN VARCHAR(100),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME
+) AS [result]'
+
+EXEC (@DynamicSQL)
+
+
+--APP_Direct_Membership
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Direct_Membership] AS
+SELECT
+APP_Direct_Membership_SK,
+ACCA_Staff_YN,
+Applied_For_Insolvency_License_YN,
+Applied_For_PC_Or_AQ_YN,
+Council_Recommended_YN,
+Admission_To_Professional_Accountancy_Body_Date,
+Director_Partner_YN,
+Firm_Holds_ACCA_Auditing_Certificate_YN,
+Firm_To_Apply_For_ACCA_Auditing_Certificate_YN,
+In_Public_Practice_YN,
+Membership_Number,
+Professional_Accountancy_Body,
+Sole_Practitioner_YN,
+CreatedOn,
+ModifiedOn,
+Admission_To_Professional_Accountancy_Body_Year,
+APP_Application_SK
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Direct_Membership/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Direct_Membership_SK VARCHAR(100),
+ACCA_Staff_YN VARCHAR(100),
+Applied_For_Insolvency_License_YN VARCHAR(100),
+Applied_For_PC_Or_AQ_YN VARCHAR(100),
+Council_Recommended_YN VARCHAR(100),
+Admission_To_Professional_Accountancy_Body_Date DATE,
+Director_Partner_YN VARCHAR(100),
+Firm_Holds_ACCA_Auditing_Certificate_YN VARCHAR(100),
+Firm_To_Apply_For_ACCA_Auditing_Certificate_YN VARCHAR(100),
+In_Public_Practice_YN VARCHAR(100),
+Membership_Number VARCHAR(100),
+Professional_Accountancy_Body VARCHAR(4000),
+Sole_Practitioner_YN VARCHAR(100),
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+Admission_To_Professional_Accountancy_Body_Year INT,
+APP_Application_SK VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_Student_Registration
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Student_Registration] AS
+SELECT
+APP_Student_Registration_SK,
+APP_Application_SK,
+Contact_Reference,
+Auto_Transfer_FIA_To_ACCA_Qual,
+Switch_Qualification_YN,
+Qualification_Complete_Date,
+Application_Reference,
+Application_Type,
+Application_Status,
+Document_Upload_Complete_Date,
+Processed_Date,
+Submitted_Date,
+Created_On_Year,
+CreatedOn,
+ModifiedOn,
+Personal_Details_Confirmed_Date,
+Summary_Page_Reached_Date
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Student_Registration/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Student_Registration_SK VARCHAR(100),
+APP_Application_SK VARCHAR(100),
+Contact_Reference VARCHAR(100),
+Auto_Transfer_FIA_To_ACCA_Qual VARCHAR(4000),
+Switch_Qualification_YN VARCHAR(100),
+Qualification_Complete_Date DATETIME,
+Application_Reference VARCHAR(100),
+Application_Type VARCHAR(200),
+Application_Status VARCHAR(4000),
+Document_Upload_Complete_Date DATETIME,
+Processed_Date DATETIME,
+Submitted_Date DATETIME,
+Created_On_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+Personal_Details_Confirmed_Date DATETIME,
+Summary_Page_Reached_Date DATETIME
+) AS [result]'
+EXEC (@DynamicSQL)
+
+
+--APP_Connection_Invitation
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Connection_Invitation] AS
+SELECT
+APP_Connection_Invitation_SK,
+APP_Application_SK,
+B2B_Customer_SK,
+Invite_Reason,
+Contact_Reference,
+Status,
+Status_Reason,
+CreatedOn,
+ModifiedOn,
+CreatedOn_Year
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Connection_Invitation/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Connection_Invitation_SK VARCHAR(100),
+APP_Application_SK VARCHAR(100),
+B2B_Customer_SK VARCHAR(100),
+Invite_Reason VARCHAR(4000),
+Contact_Reference VARCHAR(100),
+Status VARCHAR(4000),
+Status_Reason VARCHAR(4000),
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+CreatedOn_Year INT
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_CAT_Status
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_CAT_Status] AS
+SELECT
+APP_CAT_Status_SK,
+APP_Application_SK,
+Contact_Reference,
+Practical_Experience,
+FPER_Exemptions,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_CAT_Status/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_CAT_Status_SK VARCHAR(100),
+APP_Application_SK VARCHAR(100),
+Contact_Reference VARCHAR(100),
+Practical_Experience VARCHAR(4000),
+FPER_Exemptions VARCHAR(4000),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_Qualification_Transfer
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Qualification_Transfer] AS
+SELECT
+APP_Qualification_Transfer_SK,
+APP_Application_SK,
+Contact_Reference,
+Applying_For_Exemptions_YN,
+Transfer_To_ACCA_Qualification,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Qualification_Transfer/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Qualification_Transfer_SK VARCHAR(100),
+APP_Application_SK VARCHAR(100),
+Contact_Reference VARCHAR(100),
+Applying_For_Exemptions_YN VARCHAR(100),
+Transfer_To_ACCA_Qualification VARCHAR(4000),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--APP_Application_Outcome
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[APP_Application_Outcome] AS
+SELECT
+APP_Application_Outcome_SK,
+APP_Application_SK,
+Contact_Reference,
+Account_Number,
+Application_Reference,
+Outcome_Name,
+Outcome_Description,
+Outcome_Code,
+Approved_YN,
+Status,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn,
+B2B_Customer_SK
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Application/APP_Application_Outcome/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+APP_Application_Outcome_SK VARCHAR(100),
+APP_Application_SK VARCHAR(100),
+Contact_Reference VARCHAR(100),
+Account_Number VARCHAR(100),
+Application_Reference VARCHAR(100),
+Outcome_Name VARCHAR(100),
+Outcome_Description VARCHAR(2000),
+Outcome_Code VARCHAR(100),
+Approved_YN VARCHAR(4000),
+Status VARCHAR(4000),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+B2B_Customer_SK VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)

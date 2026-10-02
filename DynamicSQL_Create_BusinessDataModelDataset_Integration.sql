@@ -1,0 +1,71 @@
+USE BusinessDataModelDataset;
+GO 
+/*
+These variables will be passed as parameters from the script activity.
+Ensure that these declarations remain in the script activity. Otherwise the string length will be limited to 4000 characters.
+Also ensure that the string variables declared below are of type varchar.
+Otherwise, if using nvarchar, the dynamic sql length will be limited to 4000 characters due to an implicit conversion (varchar to nvarchar) made during the string concatination.
+*/
+ 
+DECLARE @CuratedContainerName varchar(255) = 'curated'
+------------------------------------------------------------------------------------------------------
+--Copy and paste from below into the script activity. Uncomment variable declaration section.
+/*
+DECLARE @CuratedContainerName varchar(255) = @CuratedContainerName_Input
+*/
+
+--Do not convert this to nvarchar as nvarchar limits string length to 4000 characters whereas maximum length for varchar type is 8000.
+DECLARE @DynamicSQL varchar(8000)
+
+
+--Integration_Learning_Provider_Result
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[Integration_Learning_Provider_Result] AS
+SELECT
+Acca_ID,
+Name,
+Account_Number,
+Account_Reference,
+Email_Address,
+Exam_Session_Key,
+Exam,
+Exam_Name,
+Exam_Subject_Variant,
+Centre_Code,
+Centre_Name,
+Category1,
+Category2,
+Result_Code,
+Result_Description,
+Mark,
+Language,
+Created_Date,
+Status,
+Qualification
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/Integration/Integration_Learning_Provider_Result/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+Acca_ID VARCHAR(100),
+Name VARCHAR(160),
+Account_Number VARCHAR(100),
+Account_Reference VARCHAR(100),
+Email_Address VARCHAR(100),
+Exam_Session_Key VARCHAR(100),
+Exam VARCHAR(100),
+Exam_Name VARCHAR(100),
+Exam_Subject_Variant VARCHAR(100),
+Centre_Code VARCHAR(100),
+Centre_Name VARCHAR(255),
+Category1 VARCHAR(100),
+Category2 VARCHAR(100),
+Result_Code VARCHAR(100),
+Result_Description VARCHAR(100),
+Mark VARCHAR(100),
+Language VARCHAR(100),
+Created_Date DATETIME,
+Status VARCHAR(100),
+Qualification VARCHAR(100)
+) AS [result]'
+
+EXEC (@DynamicSQL)

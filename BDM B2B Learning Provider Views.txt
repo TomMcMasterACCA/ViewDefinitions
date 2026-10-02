@@ -1,0 +1,254 @@
+DECLARE @CuratedContainerName varchar(255) = @CuratedContainerName_Input
+
+DECLARE @DynamicSQL nvarchar(4000) --Must be of type nvarchar as sp_executesql doesn't accept varchar type
+ 
+--Check if the database already exists
+--B2B_Learning_Provider
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[B2B_Learning_Provider] AS
+SELECT
+B2B_Learning_Provider_SK,
+D365CE_Learning_Provider,
+Account_Number,
+Account_Manager,
+Account_Name,
+Approval_End_Date_ALP,
+Approval_End_Date_RLP,
+Course_Start_Date_March_Session,
+Course_Start_Date_June_Session,
+Course_Start_Date_September_Session,
+Course_Start_Date_December_Session,
+Include_In_Directory_YN,
+In_Partnership_With_Another_Learning_Provider_YN,
+Publicly_Funded_YN,
+Country_Of_Learning_Provider_Partner,
+Learning_Provider_Partnership_Start_Date,
+Learning_Provider_Partnership_End_Date,
+Learning_Provider_In_Partnership_With,
+Mode_Of_Delivery,
+Recommendations,
+Teaches_Towards_March_Session_YN,
+Teaches_Towards_June_Session_YN,
+Teaches_Towards_September_Session_YN,
+Teaches_Towards_December_Session_YN,
+Teaching_Language,
+Tuition_Offered_For_ACCA_YN,
+Tuition_Offered_For_FIA_YN,
+Start_Gold_Application_By,
+Start_Teaching_By,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn,
+Tuition_Start_Date_ACCA,
+Tuition_Start_Date_FIA,
+Intended_Start_Date_ACCA,
+Intended_Start_Date_FIA,
+Monitoring_Due_Date_ALP,
+B2B_Customer_SK
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/B2B/Learning_Provider/B2B_Learning_Provider/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+B2B_Learning_Provider_SK VARCHAR(100),
+D365CE_Learning_Provider VARCHAR(100),
+Account_Number VARCHAR(100),
+Account_Manager VARCHAR(100),
+Account_Name VARCHAR(160),
+Approval_End_Date_ALP DATE,
+Approval_End_Date_RLP DATE,
+Course_Start_Date_March_Session DATE,
+Course_Start_Date_June_Session DATE,
+Course_Start_Date_September_Session DATE,
+Course_Start_Date_December_Session DATE,
+Include_In_Directory_YN VARCHAR(100),
+In_Partnership_With_Another_Learning_Provider_YN VARCHAR(100),
+Publicly_Funded_YN VARCHAR(100),
+Country_Of_Learning_Provider_Partner VARCHAR(100),
+Learning_Provider_Partnership_Start_Date DATE,
+Learning_Provider_Partnership_End_Date DATE,
+Learning_Provider_In_Partnership_With VARCHAR(100),
+Mode_Of_Delivery VARCHAR(100),
+Recommendations VARCHAR(100),
+Teaches_Towards_March_Session_YN VARCHAR(100),
+Teaches_Towards_June_Session_YN VARCHAR(100),
+Teaches_Towards_September_Session_YN VARCHAR(100),
+Teaches_Towards_December_Session_YN VARCHAR(100),
+Teaching_Language VARCHAR(100),
+Tuition_Offered_For_ACCA_YN VARCHAR(100),
+Tuition_Offered_For_FIA_YN VARCHAR(100),
+Start_Gold_Application_By DATE,
+Start_Teaching_By DATE,
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+Tuition_Start_Date_ACCA DATE,
+Tuition_Start_Date_FIA DATE,
+Intended_Start_Date_ACCA DATE,
+Intended_Start_Date_FIA DATE,
+Monitoring_Due_Date_ALP DATE,
+B2B_Customer_SK VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--B2B_Variant
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[B2B_Variant] AS
+SELECT
+B2B_Variant_SK,
+B2B_Exam_SK,
+Variant_Name,
+Variant_Code,
+Display_Order,
+Parent_Variant_Code,
+Parent_Variant_Name,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/B2B/Learning_Provider/B2B_Variant/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+B2B_Variant_SK VARCHAR(100),
+B2B_Exam_SK VARCHAR(100),
+Variant_Name VARCHAR(100),
+Variant_Code VARCHAR(100),
+Display_Order INT,
+Parent_Variant_Code VARCHAR(100),
+Parent_Variant_Name VARCHAR(100),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--B2B_Exam
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[B2B_Exam] AS
+SELECT
+B2B_Exam_SK,
+Exam_Name,
+Exam_Code,
+Display_Order,
+Learning_Provider_Type_Taught_By,
+Multiple_Variants_YN,
+Pathway_Name,
+Pathway_Code,
+Qualification_Group,
+Status,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/B2B/Learning_Provider/B2B_Exam/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+B2B_Exam_SK VARCHAR(100),
+Exam_Name VARCHAR(100),
+Exam_Code VARCHAR(100),
+Display_Order INT,
+Learning_Provider_Type_Taught_By VARCHAR(100),
+Multiple_Variants_YN VARCHAR(100),
+Pathway_Name VARCHAR(100),
+Pathway_Code VARCHAR(100),
+Qualification_Group VARCHAR(100),
+Status VARCHAR(100),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--B2B_Exam_Taught
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[B2B_Exam_Taught] AS
+SELECT
+B2B_Exam_Taught_SK,
+B2B_Learning_Provider_SK,
+B2B_Exam_SK,
+Name,
+Study_Method,
+Teaching_Language,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/B2B/Learning_Provider/B2B_Exam_Taught/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+B2B_Exam_Taught_SK VARCHAR(100),
+B2B_Learning_Provider_SK VARCHAR(100),
+B2B_Exam_SK VARCHAR(100),
+Name VARCHAR(100),
+Study_Method VARCHAR(100),
+Teaching_Language VARCHAR(100),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--B2B_Tutor
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[B2B_Tutor] AS
+SELECT
+B2B_Tutor_SK,
+APP_Application_SK,
+Account_Number,
+Contact_Reference,
+Email_Address,
+First_Name,
+Job_Title,
+Last_Name,
+Telephone_Number,
+Title,
+Qualification,
+Exam_Taught,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn,
+B2B_Customer_SK
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/B2B/Learning_Provider/B2B_Tutor/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+B2B_Tutor_SK VARCHAR(100),
+APP_Application_SK VARCHAR(100),
+Account_Number VARCHAR(100),
+Contact_Reference VARCHAR(100),
+Email_Address VARCHAR(100),
+First_Name VARCHAR(100),
+Job_Title VARCHAR(100),
+Last_Name VARCHAR(100),
+Telephone_Number VARCHAR(100),
+Title VARCHAR(100),
+Qualification VARCHAR(100),
+Exam_Taught VARCHAR(MAX),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+B2B_Customer_SK VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--B2B_Exam_Taught_Variant
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[B2B_Exam_Taught_Variant] AS
+SELECT
+B2B_Exam_Taught_Variant_SK,
+B2B_Exam_Taught_SK,
+B2B_Variant_SK,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/B2B/Learning_Provider/B2B_Exam_Taught_Variant/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+B2B_Exam_Taught_Variant_SK VARCHAR(100),
+B2B_Exam_Taught_SK VARCHAR(100),
+B2B_Variant_SK VARCHAR(100),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME
+) AS [result]'
+EXEC (@DynamicSQL)

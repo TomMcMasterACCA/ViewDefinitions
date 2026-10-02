@@ -1,0 +1,50 @@
+DECLARE @CuratedContainerName varchar(255) = @CuratedContainerName_Input
+ 
+DECLARE @DynamicSQL nvarchar(4000) --Must be of type nvarchar as sp_executesql doesn't accept varchar type
+
+--B2B_ODCBE
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[B2B_ODCBE] AS
+SELECT
+B2B_ODCBE_SK,
+D365CE_ODCBE,
+Centre_Name,
+Number_Of_Workstations,
+Exam_Room_CCTV_YN,
+Directory_Contact_Email,
+Status,
+Account_Manager,
+Account_Number,
+Admin_Site_Different_To_CBE_Site_YN,
+License_Valid_Until,
+Monitoring_Date,
+ODCBE_Status_Expired_YN,
+Include_CBE_Centre_List_YN,
+CreatedOn_Year,
+CreatedOn,
+ModifiedOn,
+B2B_Customer_SK
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/B2B/ODCBE/B2B_ODCBE/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+B2B_ODCBE_SK VARCHAR(100),
+D365CE_ODCBE VARCHAR(100),
+Centre_Name VARCHAR(100),
+Number_Of_Workstations VARCHAR(100),
+Exam_Room_CCTV_YN VARCHAR(100),
+Directory_Contact_Email VARCHAR(100),
+Status VARCHAR(100),
+Account_Manager VARCHAR(100),
+Account_Number VARCHAR(100),
+Admin_Site_Different_To_CBE_Site_YN VARCHAR(100),
+License_Valid_Until DATE,
+Monitoring_Date DATE,
+ODCBE_Status_Expired_YN VARCHAR(100),
+Include_CBE_Centre_List_YN VARCHAR(100),
+CreatedOn_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+B2B_Customer_SK VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)

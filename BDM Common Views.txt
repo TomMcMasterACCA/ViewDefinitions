@@ -1,0 +1,82 @@
+DECLARE @CuratedContainerName varchar(255) = @CuratedContainerName_Input
+
+--Do not convert this to nvarchar as nvarchar limits string length to 4000 characters whereas maximum length for varchar type is 8000.
+DECLARE @DynamicSQL varchar(8000)
+
+--COM_Country
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[COM_Country] AS
+SELECT
+ISO_Code,
+Name,
+ISO_Short_Code,
+Price_Group,
+Exam_Location_Price_Group,
+CreatedOn,
+ModifiedOn,
+D365CE_Acca_Country,
+Status
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Common/COM_Country/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+ISO_Code VARCHAR(100),
+Name VARCHAR(100),
+ISO_Short_Code VARCHAR(100),
+Price_Group VARCHAR(100),
+Exam_Location_Price_Group VARCHAR(100),
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+D365CE_Acca_Country VARCHAR(100),
+Status VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--COM_Address
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[COM_Address] AS
+SELECT
+COM_Address_SK,
+ISO_Code,
+Contact_Reference,
+Account_Number,
+Address_Number,
+Address_Line_1,
+Address_Line_2,
+Address_Line_3,
+City,
+County,
+State_Province,
+ZIP_Postal_Code,
+ISO_Short_Code,
+Country,
+Type,
+Validated_Date,
+CreatedOn,
+ModifiedOn,
+B2B_Customer_SK
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/Common/COM_Address/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+COM_Address_SK VARCHAR(100),
+ISO_Code VARCHAR(100),
+Contact_Reference VARCHAR(100),
+Account_Number VARCHAR(100),
+Address_Number INT,
+Address_Line_1 VARCHAR(1000),
+Address_Line_2 VARCHAR(1000),
+Address_Line_3 VARCHAR(1000),
+City VARCHAR(100),
+County VARCHAR(100),
+State_Province VARCHAR(100),
+ZIP_Postal_Code VARCHAR(100),
+ISO_Short_Code VARCHAR(100),
+Country VARCHAR(100),
+Type VARCHAR(100),
+Validated_Date DATE,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+B2B_Customer_SK VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)

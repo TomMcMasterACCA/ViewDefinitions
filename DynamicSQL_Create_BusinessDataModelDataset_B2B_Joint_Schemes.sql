@@ -1,0 +1,93 @@
+USE BusinessDataModelDataset;
+GO 
+
+DECLARE @CuratedContainerName varchar(255) = 'curated'
+-------------------------------------------------------------------------------------------------------------
+--Copy and paste from below into the script activity. Uncomment variable declaration section.
+/*
+DECLARE @CuratedContainerName varchar(255) = @CuratedContainerName_Input
+*/
+ 
+DECLARE @DynamicSQL nvarchar(4000) --Must be of type nvarchar as sp_executesql doesn't accept varchar type
+
+--B2B_JES_Relationship_Role
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[B2B_JES_Relationship_Role] AS
+SELECT
+B2B_JES_Relationship_Role_SK,
+B2B_JES_Agreement_SK,
+Relationship_Role_Type,
+Relationship_Type,
+Created_On_Year,
+CreatedOn,
+ModifiedOn
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/B2B/Joint_Schemes/B2B_JES_Relationship_Role/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+B2B_JES_Relationship_Role_SK VARCHAR(100),
+B2B_JES_Agreement_SK VARCHAR(100),
+Relationship_Role_Type VARCHAR(100),
+Relationship_Type VARCHAR(100),
+Created_On_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME
+) AS [result]'
+EXEC (@DynamicSQL)
+
+--B2B_JES_Agreement
+SET @DynamicSQL = 'CREATE OR ALTER VIEW [dbo].[B2B_JES_Agreement] AS
+SELECT
+B2B_JES_Agreement_SK,
+Account_Number,
+Partner,
+Country,
+Can_Be_Removed_For_Unpaid_Fees_YN,
+Closing_Date,
+Code,
+Commission_Fees_YN,
+Business_Code,
+Data_Sharing_Agreement_YN,
+Exemption_Fees_Other_Details,
+Exemption_Fees_Waived_YN,
+Internal_Code,
+Manually_Send_Pass_Rates_Report_YN,
+Manually_Send_Prizewinners_Report_YN,
+Manually_Send_Retention_Report_YN,
+Manually_Send_Sittings_Report_YN,
+CAST(Opening_Date AS DATE) AS Opening_Date,
+Status,
+Created_On_Year,
+CreatedOn,
+ModifiedOn,
+B2B_Customer_SK
+FROM OPENROWSET (
+    BULK ''' + @CuratedContainerName + '/BusinessDataModelDataset/B2B/Joint_Schemes/B2B_JES_Agreement/'',
+    DATA_SOURCE = ''DataLakeDataSource'',
+    FORMAT = ''delta''
+) WITH (
+B2B_JES_Agreement_SK VARCHAR(100),
+Account_Number VARCHAR(100),
+Partner VARCHAR(100),
+Country VARCHAR(100),
+Can_Be_Removed_For_Unpaid_Fees_YN VARCHAR(100),
+Closing_Date DATE,
+Code VARCHAR(100),
+Commission_Fees_YN VARCHAR(100),
+Business_Code VARCHAR(100),
+Data_Sharing_Agreement_YN VARCHAR(100),
+Exemption_Fees_Other_Details VARCHAR(100),
+Exemption_Fees_Waived_YN VARCHAR(100),
+Internal_Code VARCHAR(100),
+Manually_Send_Pass_Rates_Report_YN VARCHAR(100),
+Manually_Send_Prizewinners_Report_YN VARCHAR(100),
+Manually_Send_Retention_Report_YN VARCHAR(100),
+Manually_Send_Sittings_Report_YN VARCHAR(100),
+Opening_Date DATETIME2,
+Status VARCHAR(100),
+Created_On_Year INT,
+CreatedOn DATETIME,
+ModifiedOn DATETIME,
+B2B_Customer_SK VARCHAR(100)
+) AS [result]'
+EXEC (@DynamicSQL)
