@@ -1,4 +1,8 @@
 ViewName,FieldName,DynamicType,BDMType,DifferenceType,Notes
+APP_Accredited_Module_Application,Assessment_Matrix,VARCHAR(MAX),VARCHAR(100),TypeMismatch,
+APP_Accredited_Module_Application,Assessment_Method,VARCHAR(4000),VARCHAR(100),LengthMismatch,
+APP_Accredited_Module_Application,Module_Name,VARCHAR(2000),VARCHAR(100),LengthMismatch,
+APP_Accredited_Module_Application,Mode_Of_Delivery,VARCHAR(4000),VARCHAR(100),LengthMismatch,
 APP_Exemption_Accreditation_Application,Centres_Permitted_To_Run_Programme,VARCHAR(2000),VARCHAR(100),LengthMismatch,
 APP_Exemption_Accreditation_Application,Use_Computer_Technology,VARCHAR(8000),VARCHAR(2000),LengthMismatch,
 APP_Exemption_Accreditation_Application,Navigate_Windows_And_Computer_Screens,VARCHAR(8000),VARCHAR(2000),LengthMismatch,
